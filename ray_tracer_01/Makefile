@@ -1,2 +1,2 @@
-main: main.cpp
-	g++ -o main main.cpp -lGL -lGLU -lglut
+main: src/main.cpp src/dataType.hpp
+	g++ -o main src/main.cpp -lGL -lGLU -lglut
