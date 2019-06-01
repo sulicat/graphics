@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++0x  -rdynamic CMakeFiles/test.dir/src/Tracer.cpp.o CMakeFiles/test.dir/src/test.cpp.o CMakeFiles/test.dir/src/tuple.cpp.o CMakeFiles/test.dir/tests/cppSpecTest.cpp.o  -o test -lgtest -lpthread 
