@@ -1,4 +1,5 @@
 /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/rebuild_cache.dir
 /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/edit_cache.dir
-/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/test.dir
-/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/katTracer.dir
+/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/unitTest.dir
+/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/RayTracer.dir
+/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles/projectile.dir

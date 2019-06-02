@@ -22,12 +22,13 @@ class Tuple{
   float magnitude();
   Tuple normalize();
   float dot( Tuple v2 );
-  bool isVector();
-  bool isPoint();
+  bool isVector() const;
+  bool isPoint() const;
 
   Tuple cross( const Tuple &v2 );
   void toString();
   // operators
+  friend std::ostream& operator << ( std::ostream& os, const Tuple &t );
   Tuple operator + ( const Tuple &a );
   Tuple operator - ( const Tuple &a );
   Tuple operator * ( const float &a );

@@ -42,13 +42,13 @@ Tuple Tuple::cross( const Tuple &v2 ){
 		0);
 }
 
-bool Tuple::isVector(){
+bool Tuple::isVector() const {
   if( w == 0.0 )
     return true;
   return false;
 }
 
-bool Tuple::isPoint(){
+bool Tuple::isPoint() const {
   if( w != 0.0 )
     return true;
   return false;
@@ -62,6 +62,12 @@ void Tuple::toString(){
 
 
 // operators
+std::ostream& operator << ( std::ostream& os, const Tuple &t ){
+  if ( t.isVector() ){ os << "v: "; }else{ os << "p: "; }
+  os << "(" << t.x << ", " << t.y << ", " <<  t.z << ", " << t.w << ")";
+  return os;
+}
+
 Tuple Tuple::operator + ( const Tuple &a ){
   return Tuple( x+a.x, y+a.y, z+a.z, w+a.w );
 }

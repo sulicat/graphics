@@ -65,76 +65,113 @@ CMAKE_SOURCE_DIR = /home/sulicat/git/graphics/ray_tracer_03
 CMAKE_BINARY_DIR = /home/sulicat/git/graphics/ray_tracer_03/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/unitTest.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/unitTest.dir/all:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/depend
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles --progress-num=13,14,15,16,17,18 "Built target unitTest"
+.PHONY : CMakeFiles/unitTest.dir/all
 
 # Include target in all.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/unitTest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+CMakeFiles/unitTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unitTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+.PHONY : CMakeFiles/unitTest.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
+unitTest: CMakeFiles/unitTest.dir/rule
 
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+.PHONY : unitTest
 
 # clean rule for target.
-clean: CMakeFiles/test.dir/clean
+CMakeFiles/unitTest.dir/clean:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/clean
+.PHONY : CMakeFiles/unitTest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/unitTest.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/katTracer.dir
+# Target rules for target CMakeFiles/RayTracer.dir
 
 # All Build rule for target.
-CMakeFiles/katTracer.dir/all:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/depend
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target katTracer"
-.PHONY : CMakeFiles/katTracer.dir/all
+CMakeFiles/RayTracer.dir/all:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/depend
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target RayTracer"
+.PHONY : CMakeFiles/RayTracer.dir/all
 
 # Include target in all.
-all: CMakeFiles/katTracer.dir/all
+all: CMakeFiles/RayTracer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/katTracer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/katTracer.dir/all
+CMakeFiles/RayTracer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RayTracer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 0
-.PHONY : CMakeFiles/katTracer.dir/rule
+.PHONY : CMakeFiles/RayTracer.dir/rule
 
 # Convenience name for target.
-katTracer: CMakeFiles/katTracer.dir/rule
+RayTracer: CMakeFiles/RayTracer.dir/rule
 
-.PHONY : katTracer
-
-# clean rule for target.
-CMakeFiles/katTracer.dir/clean:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/clean
-.PHONY : CMakeFiles/katTracer.dir/clean
+.PHONY : RayTracer
 
 # clean rule for target.
-clean: CMakeFiles/katTracer.dir/clean
+CMakeFiles/RayTracer.dir/clean:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/clean
+.PHONY : CMakeFiles/RayTracer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/RayTracer.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/projectile.dir
+
+# All Build rule for target.
+CMakeFiles/projectile.dir/all:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/depend
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles --progress-num=7,8,9,10,11,12 "Built target projectile"
+.PHONY : CMakeFiles/projectile.dir/all
+
+# Include target in all.
+all: CMakeFiles/projectile.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/projectile.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/projectile.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sulicat/git/graphics/ray_tracer_03/build/CMakeFiles 0
+.PHONY : CMakeFiles/projectile.dir/rule
+
+# Convenience name for target.
+projectile: CMakeFiles/projectile.dir/rule
+
+.PHONY : projectile
+
+# clean rule for target.
+CMakeFiles/projectile.dir/clean:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/clean
+.PHONY : CMakeFiles/projectile.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/projectile.dir/clean
 
 .PHONY : clean
 

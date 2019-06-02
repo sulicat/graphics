@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++0x  -rdynamic CMakeFiles/RayTracer.dir/src/Tracer.cpp.o CMakeFiles/RayTracer.dir/src/environment.cpp.o CMakeFiles/RayTracer.dir/src/projectile.cpp.o CMakeFiles/RayTracer.dir/src/tuple.cpp.o CMakeFiles/RayTracer.dir/src_entrypnt/main_ray_tracer.cpp.o  -o RayTracer 

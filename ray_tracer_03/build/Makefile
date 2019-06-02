@@ -111,30 +111,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named unitTest
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+unitTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitTest
+.PHONY : unitTest
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+unitTest/fast:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/build
+.PHONY : unitTest/fast
 
 #=============================================================================
-# Target rules for targets named katTracer
+# Target rules for targets named RayTracer
 
 # Build rule for target.
-katTracer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 katTracer
-.PHONY : katTracer
+RayTracer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RayTracer
+.PHONY : RayTracer
 
 # fast build rule for target.
-katTracer/fast:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/build
-.PHONY : katTracer/fast
+RayTracer/fast:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/build
+.PHONY : RayTracer/fast
+
+#=============================================================================
+# Target rules for targets named projectile
+
+# Build rule for target.
+projectile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projectile
+.PHONY : projectile
+
+# fast build rule for target.
+projectile/fast:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/build
+.PHONY : projectile/fast
 
 src/Tracer.o: src/Tracer.cpp.o
 
@@ -142,8 +155,9 @@ src/Tracer.o: src/Tracer.cpp.o
 
 # target to build an object file
 src/Tracer.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Tracer.cpp.o
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/Tracer.cpp.o
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/Tracer.cpp.o
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/Tracer.cpp.o
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/Tracer.cpp.o
 .PHONY : src/Tracer.cpp.o
 
 src/Tracer.i: src/Tracer.cpp.i
@@ -152,8 +166,9 @@ src/Tracer.i: src/Tracer.cpp.i
 
 # target to preprocess a source file
 src/Tracer.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Tracer.cpp.i
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/Tracer.cpp.i
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/Tracer.cpp.i
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/Tracer.cpp.i
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/Tracer.cpp.i
 .PHONY : src/Tracer.cpp.i
 
 src/Tracer.s: src/Tracer.cpp.s
@@ -162,63 +177,76 @@ src/Tracer.s: src/Tracer.cpp.s
 
 # target to generate assembly for a file
 src/Tracer.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Tracer.cpp.s
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/Tracer.cpp.s
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/Tracer.cpp.s
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/Tracer.cpp.s
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/Tracer.cpp.s
 .PHONY : src/Tracer.cpp.s
 
-src/main.o: src/main.cpp.o
+src/environment.o: src/environment.cpp.o
 
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-src/test.o: src/test.cpp.o
-
-.PHONY : src/test.o
+.PHONY : src/environment.o
 
 # target to build an object file
-src/test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
+src/environment.cpp.o:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/environment.cpp.o
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/environment.cpp.o
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/environment.cpp.o
+.PHONY : src/environment.cpp.o
 
-src/test.i: src/test.cpp.i
+src/environment.i: src/environment.cpp.i
 
-.PHONY : src/test.i
+.PHONY : src/environment.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/environment.cpp.i:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/environment.cpp.i
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/environment.cpp.i
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/environment.cpp.i
+.PHONY : src/environment.cpp.i
 
-src/test.s: src/test.cpp.s
+src/environment.s: src/environment.cpp.s
 
-.PHONY : src/test.s
+.PHONY : src/environment.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/environment.cpp.s:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/environment.cpp.s
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/environment.cpp.s
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/environment.cpp.s
+.PHONY : src/environment.cpp.s
+
+src/projectile.o: src/projectile.cpp.o
+
+.PHONY : src/projectile.o
+
+# target to build an object file
+src/projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/projectile.cpp.o
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/projectile.cpp.o
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/projectile.cpp.o
+.PHONY : src/projectile.cpp.o
+
+src/projectile.i: src/projectile.cpp.i
+
+.PHONY : src/projectile.i
+
+# target to preprocess a source file
+src/projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/projectile.cpp.i
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/projectile.cpp.i
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/projectile.cpp.i
+.PHONY : src/projectile.cpp.i
+
+src/projectile.s: src/projectile.cpp.s
+
+.PHONY : src/projectile.s
+
+# target to generate assembly for a file
+src/projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/projectile.cpp.s
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/projectile.cpp.s
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/projectile.cpp.s
+.PHONY : src/projectile.cpp.s
 
 src/tuple.o: src/tuple.cpp.o
 
@@ -226,8 +254,9 @@ src/tuple.o: src/tuple.cpp.o
 
 # target to build an object file
 src/tuple.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/tuple.cpp.o
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/tuple.cpp.o
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/tuple.cpp.o
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/tuple.cpp.o
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/tuple.cpp.o
 .PHONY : src/tuple.cpp.o
 
 src/tuple.i: src/tuple.cpp.i
@@ -236,8 +265,9 @@ src/tuple.i: src/tuple.cpp.i
 
 # target to preprocess a source file
 src/tuple.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/tuple.cpp.i
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/tuple.cpp.i
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/tuple.cpp.i
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/tuple.cpp.i
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/tuple.cpp.i
 .PHONY : src/tuple.cpp.i
 
 src/tuple.s: src/tuple.cpp.s
@@ -246,39 +276,91 @@ src/tuple.s: src/tuple.cpp.s
 
 # target to generate assembly for a file
 src/tuple.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/tuple.cpp.s
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/src/tuple.cpp.s
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src/tuple.cpp.s
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src/tuple.cpp.s
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src/tuple.cpp.s
 .PHONY : src/tuple.cpp.s
 
-tests/cppSpecTest.o: tests/cppSpecTest.cpp.o
+src_entrypnt/main_projectile.o: src_entrypnt/main_projectile.cpp.o
 
-.PHONY : tests/cppSpecTest.o
+.PHONY : src_entrypnt/main_projectile.o
 
 # target to build an object file
-tests/cppSpecTest.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/cppSpecTest.cpp.o
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/tests/cppSpecTest.cpp.o
-.PHONY : tests/cppSpecTest.cpp.o
+src_entrypnt/main_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src_entrypnt/main_projectile.cpp.o
+.PHONY : src_entrypnt/main_projectile.cpp.o
 
-tests/cppSpecTest.i: tests/cppSpecTest.cpp.i
+src_entrypnt/main_projectile.i: src_entrypnt/main_projectile.cpp.i
 
-.PHONY : tests/cppSpecTest.i
+.PHONY : src_entrypnt/main_projectile.i
 
 # target to preprocess a source file
-tests/cppSpecTest.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/cppSpecTest.cpp.i
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/tests/cppSpecTest.cpp.i
-.PHONY : tests/cppSpecTest.cpp.i
+src_entrypnt/main_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src_entrypnt/main_projectile.cpp.i
+.PHONY : src_entrypnt/main_projectile.cpp.i
 
-tests/cppSpecTest.s: tests/cppSpecTest.cpp.s
+src_entrypnt/main_projectile.s: src_entrypnt/main_projectile.cpp.s
 
-.PHONY : tests/cppSpecTest.s
+.PHONY : src_entrypnt/main_projectile.s
 
 # target to generate assembly for a file
-tests/cppSpecTest.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/cppSpecTest.cpp.s
-	$(MAKE) -f CMakeFiles/katTracer.dir/build.make CMakeFiles/katTracer.dir/tests/cppSpecTest.cpp.s
-.PHONY : tests/cppSpecTest.cpp.s
+src_entrypnt/main_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/projectile.dir/build.make CMakeFiles/projectile.dir/src_entrypnt/main_projectile.cpp.s
+.PHONY : src_entrypnt/main_projectile.cpp.s
+
+src_entrypnt/main_ray_tracer.o: src_entrypnt/main_ray_tracer.cpp.o
+
+.PHONY : src_entrypnt/main_ray_tracer.o
+
+# target to build an object file
+src_entrypnt/main_ray_tracer.cpp.o:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src_entrypnt/main_ray_tracer.cpp.o
+.PHONY : src_entrypnt/main_ray_tracer.cpp.o
+
+src_entrypnt/main_ray_tracer.i: src_entrypnt/main_ray_tracer.cpp.i
+
+.PHONY : src_entrypnt/main_ray_tracer.i
+
+# target to preprocess a source file
+src_entrypnt/main_ray_tracer.cpp.i:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src_entrypnt/main_ray_tracer.cpp.i
+.PHONY : src_entrypnt/main_ray_tracer.cpp.i
+
+src_entrypnt/main_ray_tracer.s: src_entrypnt/main_ray_tracer.cpp.s
+
+.PHONY : src_entrypnt/main_ray_tracer.s
+
+# target to generate assembly for a file
+src_entrypnt/main_ray_tracer.cpp.s:
+	$(MAKE) -f CMakeFiles/RayTracer.dir/build.make CMakeFiles/RayTracer.dir/src_entrypnt/main_ray_tracer.cpp.s
+.PHONY : src_entrypnt/main_ray_tracer.cpp.s
+
+src_entrypnt/main_test.o: src_entrypnt/main_test.cpp.o
+
+.PHONY : src_entrypnt/main_test.o
+
+# target to build an object file
+src_entrypnt/main_test.cpp.o:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src_entrypnt/main_test.cpp.o
+.PHONY : src_entrypnt/main_test.cpp.o
+
+src_entrypnt/main_test.i: src_entrypnt/main_test.cpp.i
+
+.PHONY : src_entrypnt/main_test.i
+
+# target to preprocess a source file
+src_entrypnt/main_test.cpp.i:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src_entrypnt/main_test.cpp.i
+.PHONY : src_entrypnt/main_test.cpp.i
+
+src_entrypnt/main_test.s: src_entrypnt/main_test.cpp.s
+
+.PHONY : src_entrypnt/main_test.s
+
+# target to generate assembly for a file
+src_entrypnt/main_test.cpp.s:
+	$(MAKE) -f CMakeFiles/unitTest.dir/build.make CMakeFiles/unitTest.dir/src_entrypnt/main_test.cpp.s
+.PHONY : src_entrypnt/main_test.cpp.s
 
 # Help Target
 help:
@@ -288,23 +370,30 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... katTracer"
+	@echo "... unitTest"
+	@echo "... RayTracer"
+	@echo "... projectile"
 	@echo "... src/Tracer.o"
 	@echo "... src/Tracer.i"
 	@echo "... src/Tracer.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/environment.o"
+	@echo "... src/environment.i"
+	@echo "... src/environment.s"
+	@echo "... src/projectile.o"
+	@echo "... src/projectile.i"
+	@echo "... src/projectile.s"
 	@echo "... src/tuple.o"
 	@echo "... src/tuple.i"
 	@echo "... src/tuple.s"
-	@echo "... tests/cppSpecTest.o"
-	@echo "... tests/cppSpecTest.i"
-	@echo "... tests/cppSpecTest.s"
+	@echo "... src_entrypnt/main_projectile.o"
+	@echo "... src_entrypnt/main_projectile.i"
+	@echo "... src_entrypnt/main_projectile.s"
+	@echo "... src_entrypnt/main_ray_tracer.o"
+	@echo "... src_entrypnt/main_ray_tracer.i"
+	@echo "... src_entrypnt/main_ray_tracer.s"
+	@echo "... src_entrypnt/main_test.o"
+	@echo "... src_entrypnt/main_test.i"
+	@echo "... src_entrypnt/main_test.s"
 .PHONY : help
 
 

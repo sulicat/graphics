@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++0x  -rdynamic CMakeFiles/projectile.dir/src/Tracer.cpp.o CMakeFiles/projectile.dir/src/environment.cpp.o CMakeFiles/projectile.dir/src/projectile.cpp.o CMakeFiles/projectile.dir/src/tuple.cpp.o CMakeFiles/projectile.dir/src_entrypnt/main_projectile.cpp.o  -o projectile 

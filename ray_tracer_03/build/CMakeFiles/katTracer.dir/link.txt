@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++0x  -rdynamic CMakeFiles/katTracer.dir/src/Tracer.cpp.o CMakeFiles/katTracer.dir/src/main.cpp.o CMakeFiles/katTracer.dir/src/tuple.cpp.o CMakeFiles/katTracer.dir/tests/cppSpecTest.cpp.o  -o katTracer 
